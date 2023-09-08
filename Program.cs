@@ -1,7 +1,10 @@
+using BackEnd_Intern__TEST_.CourseContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<VnrInternShipContext>();
 
 var app = builder.Build();
 
