@@ -1,21 +1,36 @@
 ﻿@using BackEnd_Intern__TEST_.CourseContext;
 
+@{
+    var tenKhoaHoc = ViewBag.TenKhoaHoc;
+    ViewBag.Title = tenKhoaHoc;
+}
 @model CoursesModel
 
- <ul>
-    @foreach(var item in Model.KhoaHocs)
-    {
-        <li>
-            <a href="@Url.Action("Index", "Home", new {id=item.Id})">@item.TenKhoaHoc</a>           
-         </li>
-    }
-</ul>
+<title>@ViewBag.Title</title>
 
+<div class="d-flex flex-row" style="height: 100vh">
+    <div class="border p-2 h-100" style="width: 18rem">
+        <h1  style="border-bottom: 4px solid yellow">Khóa Học</h1>
+        
+        <ul >
+            @foreach(var item in Model.KhoaHocs)
+            {
+                <li class="my-2">
+                    <a href="@Url.Action("Index", "Home", new {id=item.Id})">@item.TenKhoaHoc</a>
+                </li>
+            }
+        </ul>
+    </div>
 
-<div id="course-details">
-    @foreach(var item in Model.MonHocs)
-    {
-        <p>@item.TenMonHoc</p>
-    }
+    <div class="container p-2">
+        <h1 style="border-bottom: 4px solid yellow; width: 100%">Khóa Học: @tenKhoaHoc</h1>
+        <div class="row row-cols-2">
+            @foreach(var item in Model.MonHocs)
+            {
+                <div class="col " style="border-right: 2px solid black;">@item.Id. @item.TenMonHoc</div>
+            }
+        </div>
+    </div>
 </div>
+
 

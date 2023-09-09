@@ -21,11 +21,8 @@ namespace BackEnd_Intern__TEST_.Controllers
             CoursesModel coursesModel = new CoursesModel();
 
             coursesModel.KhoaHocs = _context.KhoaHocs.ToList();
-
-
             coursesModel.MonHocs = _context.MonHocs.Where(x => x.KhoaHocId == id).ToList();
-
-
+            ViewBag.TenKhoaHoc = _context.KhoaHocs.Find(id).TenKhoaHoc;
             return View(coursesModel);
         }
 
