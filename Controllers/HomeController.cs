@@ -16,15 +16,17 @@ namespace BackEnd_Intern__TEST_.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index( int? id )
         {
-            var resullt = _context.KhoaHocs;
-            return View();
-        }
+            CoursesModel coursesModel = new CoursesModel();
 
-        public IActionResult Privacy()
-        {
-            return View();
+            coursesModel.KhoaHocs = _context.KhoaHocs.ToList();
+
+
+            coursesModel.MonHocs = _context.MonHocs.Where(x => x.KhoaHocId == id).ToList();
+
+
+            return View(coursesModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

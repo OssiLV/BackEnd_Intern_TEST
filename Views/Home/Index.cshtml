@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using BackEnd_Intern__TEST_.CourseContext;
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model CoursesModel
+
+ <ul>
+    @foreach(var item in Model.KhoaHocs)
+    {
+        <li>
+            <a href="@Url.Action("Index", "Home", new {id=item.Id})">@item.TenKhoaHoc</a>           
+         </li>
+    }
+</ul>
+
+
+<div id="course-details">
+    @foreach(var item in Model.MonHocs)
+    {
+        <p>@item.TenMonHoc</p>
+    }
 </div>
+
