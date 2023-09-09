@@ -1,5 +1,9 @@
 # Back-End Intern TEST
+## How to run this App
 
+ - Just clone and run it :D
+
+    
 ## Steps (Database First)
 
  - Install ( Microsoft.EntityFrameworkCore.SqlServer ) and ( Microsoft. EntityFrameworkCore.Tools )
