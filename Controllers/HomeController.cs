@@ -1,5 +1,5 @@
-﻿using BackEnd_Intern__TEST_.CourseContext;
-using BackEnd_Intern__TEST_.Models;
+﻿using BackEnd_Intern__TEST_.Models;
+using BackEnd_Intern__TEST_.Models.CourseContext;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

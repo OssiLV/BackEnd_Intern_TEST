@@ -1,4 +1,4 @@
-﻿using BackEnd_Intern__TEST_.CourseContext;
+﻿using BackEnd_Intern__TEST_.Models.CourseContext;
 
 namespace BackEnd_Intern__TEST_.Models
 {

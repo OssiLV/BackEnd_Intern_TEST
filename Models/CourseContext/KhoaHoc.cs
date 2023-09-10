@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BackEnd_Intern__TEST_.CourseContext;
+namespace BackEnd_Intern__TEST_.Models.CourseContext;
 
 public partial class KhoaHoc
 {
